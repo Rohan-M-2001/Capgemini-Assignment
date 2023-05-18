@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 
 @interface Info{
 	int AuthorID();
-	String Author() default "SHSHANK";
+	String Author() default "Rohan";
 	String Supervisor() default "Onkar";
 	String Date();
 	String Time();
@@ -18,15 +18,15 @@ import java.lang.reflect.Method;
 	
 }
 
-class Devloper{
-	@Info(AuthorID = 102,  Author = "Shshank garg", Date = "23-02-2022", Time = "10:00pm", version = 4)
+class Developer{
+	@Info(AuthorID = 102,  Author = "Rohan Mitra", Date = "23-02-2022", Time = "10:00pm", version = 4)
 	public void displayMethod()
 	{
 		} 
 }
 public class AnnotationQ2 {
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException{ 
-		Devloper devloper = new Devloper();
+		Developer developer = new Developer();
 		Method m=devloper.getClass().getMethod("displayMethod");
 		
 		Info d1 = m.getAnnotation(Info.class);
